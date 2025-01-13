@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Tab Auto Closer",
+    "version": "3.0",
+    "permissions": ["tabs", "storage", "notifications"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_title": "Tab Auto Closer"
+    },
+    "chrome_url_overrides": {
+      "newtab": "dashboard.html"
+    },
+    "description": "Automatically closes distraction tabs and provides analytics."
+}

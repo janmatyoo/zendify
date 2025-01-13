@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Auto Closer Analytics</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .add-site {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 8px;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #3f51b5;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #303f9f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    .distraction-list {
+      margin-top: 20px;
+    }
+    .distraction-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+    .remove-btn {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .remove-btn:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tab Auto Closer Analytics</h1>
+
+    <div class="add-site">
+      <input type="text" id="newSite" placeholder="Add a new distraction site (e.g., youtube.com)">
+      <button id="addSiteBtn">Add Site</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Site</th>
+          <th>Times Closed</th>
+        </tr>
+      </thead>
+      <tbody id="analyticsTable"></tbody>
+    </table>
+
+    <div class="distraction-list">
+      <h3>Distraction Sites</h3>
+      <div id="distractionSitesList"></div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
