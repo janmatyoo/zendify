@@ -10,7 +10,7 @@
       "default_title": "Tab Auto Closer"
     },
     "chrome_url_overrides": {
-      "newtab": "dashboard.html"
+      "newtab": "index.html"
     },
     "description": "Automatically closes distraction tabs and provides analytics."
 }
